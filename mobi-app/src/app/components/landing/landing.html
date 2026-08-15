@@ -1,4 +1,4 @@
-<section class="hero">
+<section id="hero" class="hero">
   <div class="left">
     <img src="assets/img/TheBoss.jpeg" />
   </div>
@@ -6,15 +6,14 @@
   <div class="right">
     <h1>
       Leo Mendes <br />
-      — Photographer
     </h1>
 
-    <button>Descubra a minha arte</button>
+    <a href="#gallery" class="cta-link"><button type="button">Descubra a minha arte</button></a>
   </div>
 
 </section>
 
-<section class="gallery">
+<section id="gallery" class="gallery">
 
   <div class="gallery-header">
     <span>SELECTED WORK</span>
@@ -33,6 +32,7 @@
           [src]="img"
           alt="Fotografia de Leo Mendes"
           loading="lazy"
+          decoding="async"
         />
       </div>
     }
@@ -41,14 +41,67 @@
 
 </section>
 
-<section class="about">
+<section id="about" class="about">
+  <div class="about__image">
+    <img
+      src="assets/img/IMG_4154.JPG.jpeg"
+      alt="Sobre o fotógrafo"
+      fetchpriority="high"
+      decoding="async"
+    />
+
+    <span class="about__image-number">04</span>
+  </div>
+
+  <div class="about__content">
+
+    <div class="about__header">
+      <span class="eyebrow">Sobre</span>
+
+      <h2>
+        <br />
+        O fotógrafo "The Boss"
+      </h2>
+    </div>
+
+    <div class="about__text">
+      <p class="about__intro">
+        Histórias reais, momentos únicos e imagens
+        que permanecem.
+      </p>
+
+      <p>
+        Acreditamos que cada fotografia carrega uma
+        história. Nosso trabalho nasce da observação,
+        da sensibilidade e da busca por registrar aquilo
+        que acontece naturalmente.
+      </p>
+
+      <p>
+        Mais do que criar imagens bonitas, buscamos
+        construir registros que tenham significado,
+        personalidade e verdade.
+      </p>
+
+      <p>
+        Cada ensaio é pensado de forma única,
+        respeitando a identidade, o momento e a
+        essência de cada pessoa.
+      </p>
+    </div>
+
+    <div class="about__footer">
+      <span>PHOTOGRAPHY</span>
+      <span>EST. 2024</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="services" class="services">
 ...
 </section>
 
-<section class="services">
-...
-</section>
-
-<section class="contact">
+<section id="contact" class="contact">
 ...
 </section>

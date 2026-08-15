@@ -1,8 +1,9 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './landing.html',
   styleUrl: './landing.css',
 })
@@ -23,5 +24,12 @@ galleryImages = [
     'assets/img/IMG_2143.JPG.jpeg',
     'assets/img/IMG_7643.JPEG',
     'assets/img/IMG_8314.jpg',
+    'assets/img/IMG_8350.jpg',
+    'assets/img/IMG_8427.jpg',
+    'assets/img/IMG_8523.jpg',
+    'assets/img/IMG_8596.jpg',
+    'assets/img/IMG_8531.jpg',
+    'assets/img/IMG_8210.jpg',
+    'assets/img/IMG_8518.jpg',
   ];
 }
