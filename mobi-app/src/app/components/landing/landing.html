@@ -1,0 +1,54 @@
+<section class="hero">
+  <div class="left">
+    <img src="assets/img/TheBoss.jpeg" />
+  </div>
+
+  <div class="right">
+    <h1>
+      Leo Mendes <br />
+      — Photographer
+    </h1>
+
+    <button>Descubra a minha arte</button>
+  </div>
+
+</section>
+
+<section class="gallery">
+
+  <div class="gallery-header">
+    <span>SELECTED WORK</span>
+
+    <h2>
+      Momentos que<br />
+      contam histórias.
+    </h2>
+  </div>
+
+  <div class="grid">
+
+    @for (img of galleryImages; track img) {
+      <div class="item">
+        <img
+          [src]="img"
+          alt="Fotografia de Leo Mendes"
+          loading="lazy"
+        />
+      </div>
+    }
+
+  </div>
+
+</section>
+
+<section class="about">
+...
+</section>
+
+<section class="services">
+...
+</section>
+
+<section class="contact">
+...
+</section>
