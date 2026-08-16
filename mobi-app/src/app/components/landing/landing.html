@@ -1,0 +1,422 @@
+<section id="hero" class="hero">
+  <div class="left">
+    <img src="assets/img/TheBoss.jpeg" />
+  </div>
+
+  <div class="right">
+    <h1>
+      Leo Mendes <br />
+      Portfólio Fotográfico
+    </h1>
+
+    <a href="#gallery" class="cta-link"><button type="button">Descubra a minha arte</button></a>
+  </div>
+
+</section>
+
+<section id="gallery" class="gallery">
+
+  <div class="gallery-header">
+    <span>SELECTED WORK</span>
+
+    <h2>
+      Momentos que<br />
+      contam histórias.
+    </h2>
+  </div>
+
+  <div class="grid">
+
+    @for (img of galleryImages; track img) {
+      <div class="item">
+        <img
+          [src]="img"
+          alt="Fotografia de Leo Mendes"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    }
+
+  </div>
+
+</section>
+
+<section id="about" class="about">
+  <div class="about__image">
+    <img
+      src="assets/img/IMG_4154.JPG.jpeg"
+      alt="Sobre o fotógrafo"
+      fetchpriority="high"
+      decoding="async"
+    />
+
+    <span class="about__image-number">04</span>
+  </div>
+
+  <div class="about__content">
+
+    <div class="about__header">
+      <span class="eyebrow">Sobre</span>
+
+      <h2>
+        <br />
+        O fotógrafo "The Boss"
+      </h2>
+    </div>
+
+    <div class="about__text">
+      <p class="about__intro">
+        Histórias reais, momentos únicos e imagens
+        que permanecem.
+      </p>
+
+      <p>
+        Acreditamos que cada fotografia carrega uma
+        história. Nosso trabalho nasce da observação,
+        da sensibilidade e da busca por registrar aquilo
+        que acontece naturalmente.
+      </p>
+
+      <p>
+        Mais do que criar imagens bonitas, buscamos
+        construir registros que tenham significado,
+        personalidade e verdade.
+      </p>
+
+      <p>
+        Cada ensaio é pensado de forma única,
+        respeitando a identidade, o momento e a
+        essência de cada pessoa.
+      </p>
+    </div>
+
+    <div class="about__footer">
+      <span>PHOTOGRAPHY</span>
+      <span>EST. 2024</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="services" class="services">
+
+  <div class="services-header">
+
+    <span>Serviços</span>
+
+    <h2>
+      O que podemos<br />
+      criar juntos.
+    </h2>
+
+  </div>
+
+
+  <div class="services-list">
+
+
+    <!-- FILMAKER -->
+
+    <article class="service-card">
+
+      <div class="service-card__number">
+        01
+      </div>
+
+      <div class="service-card__content">
+
+        <div class="service-card__title">
+
+          <h3>
+            Filmmaker
+          </h3>
+
+          <span>
+            ↗
+          </span>
+
+        </div>
+
+        <p>
+          Filmes que transformam momentos
+          em histórias.
+        </p>
+
+        <div class="service-card__catalog">
+
+          <span>Filmes institucionais</span>
+          <span>Videoclipes</span>
+          <span>Fashion films</span>
+          <span>Reels cinematográficos</span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- PHOTO -->
+
+    <article class="service-card">
+
+      <div class="service-card__number">
+        02
+      </div>
+
+      <div class="service-card__content">
+
+        <div class="service-card__title">
+
+          <h3>
+            Photo
+          </h3>
+
+          <span>
+            ↗
+          </span>
+
+        </div>
+
+        <p>
+          Imagens que comunicam antes
+          mesmo das palavras.
+        </p>
+
+        <div class="service-card__catalog">
+
+          <span>Editorial</span>
+          <span>Moda</span>
+          <span>Retratos</span>
+          <span>Produtos</span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- EVENTOS -->
+
+    <article class="service-card">
+
+      <div class="service-card__number">
+        03
+      </div>
+
+      <div class="service-card__content">
+
+        <div class="service-card__title">
+
+          <h3>
+            Cobertura de eventos
+          </h3>
+
+          <span>
+            ↗
+          </span>
+
+        </div>
+
+        <p>
+          A energia do evento registrada
+          em cada detalhe.
+        </p>
+
+        <div class="service-card__catalog">
+
+          <span>Shows</span>
+          <span>Festas</span>
+          <span>Eventos corporativos</span>
+          <span>Casamentos</span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- STORYMAKER -->
+
+    <article class="service-card">
+
+      <div class="service-card__number">
+        04
+      </div>
+
+      <div class="service-card__content">
+
+        <div class="service-card__title">
+
+          <h3>
+            Storymaker
+          </h3>
+
+          <span>
+            ↗
+          </span>
+
+        </div>
+
+        <p>
+          Conteúdo rápido, espontâneo e
+          pensado para redes sociais.
+        </p>
+
+        <div class="service-card__catalog">
+
+          <span>Stories</span>
+          <span>Reels</span>
+          <span>Bastidores</span>
+          <span>Cobertura em tempo real</span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUÇÃO DE CONTEÚDO -->
+
+    <article class="service-card">
+
+      <div class="service-card__number">
+        05
+      </div>
+
+      <div class="service-card__content">
+
+        <div class="service-card__title">
+
+          <h3>
+            Produção de conteúdo
+          </h3>
+
+          <span>
+            ↗
+          </span>
+
+        </div>
+
+        <p>
+          Conteúdo estratégico para marcas
+          que querem se destacar.
+        </p>
+
+        <div class="service-card__catalog">
+
+          <span>Campanhas</span>
+          <span>Conteúdo para Instagram</span>
+          <span>Conteúdo para marcas</span>
+          <span>Pacotes mensais</span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+  <div class="contact-header">
+
+    <span><strong>CONTACT</strong></span>
+
+    <h2>
+      Vamos trocar<br />
+      uma ideia ?
+    </h2>
+
+    <p>
+      Se você tem uma ideia, um projeto ou
+      simplesmente quer conversar, vamos
+      começar por aqui.
+    </p>
+
+  </div>
+
+
+  <div class="contact-content">
+
+    <div class="contact-info">
+
+      <div class="contact-item">
+
+        <span>EMAIL</span>
+
+        <a href="mailto:mobifullcontato@gmail.com">
+          mobifullcontato@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <span>INSTAGRAM</span>
+
+        <a
+          href="#"
+          target="_blank"
+        >
+          @mobi.full
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <span>WHATSAPP</span>
+
+        <a href="https://wa.me/21969744793" target="_blank">
+          +55 21 96974-4793
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="contact-action">
+
+      <a
+        href="https://wa.me/21969744793"
+        class="contact-button"
+      >
+        <span>
+          FALE COM A GENTE
+        </span>
+
+        <span>
+          ↗
+        </span>
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <footer class="contact-footer">
+
+    <span>
+      © 2026 STUDIO
+    </span>
+
+    <span>
+      Rio de Janeiro · BRASIL
+    </span>
+
+  </footer>
+
+</section>
