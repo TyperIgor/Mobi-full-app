@@ -36,7 +36,24 @@
     flex-direction: column;
     text-align: center;
     gap: 40px;
-    padding: 64px 24px 72px;
+    padding: 72px 24px 80px;
+    border-radius: 0 0 26px 26px;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .right h1 {
+    font-size: clamp(2.5rem, 9vw, 4.5rem);
+    line-height: 0.94;
+  }
+
+  .right button {
+    margin-top: 24px;
+    padding: 14px 22px;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
   }
 }
 
@@ -265,28 +282,41 @@
 
   .about {
     grid-template-columns: 1fr;
+    border-radius: 26px 26px 0 0;
   }
 
   .about__image {
-    height: 70vh;
-    padding: 2rem;
+    height: 62vh;
+    padding: 1.25rem;
   }
 
   .about__content {
     min-height: auto;
-    padding: 4rem 2rem 2rem;
+    padding: 3.5rem 1.5rem 2rem;
   }
 
   .about__header {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .about__header h2 {
-    font-size: 4rem;
+    font-size: clamp(2.6rem, 10vw, 4.2rem);
+    line-height: 0.94;
   }
 
   .about__text {
-    padding: 4rem 0;
+    padding: 2.5rem 0 2rem;
+    max-width: 100%;
+  }
+
+  .about__text p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  .about__footer {
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
   }
 }
 
@@ -294,20 +324,24 @@
 @media (max-width: 600px) {
 
   .about__image {
-    height: 60vh;
-    padding: 1rem;
+    height: 54vh;
+    padding: 0.8rem;
   }
 
   .about__content {
-    padding: 3rem 1.5rem 2rem;
+    padding: 3rem 1.25rem 1.75rem;
   }
 
   .about__header h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
   }
 
   .about__text {
     max-width: 100%;
+  }
+
+  .about__text .about__intro {
+    font-size: 1rem;
   }
 }
 
@@ -454,21 +488,21 @@
 
   .gallery {
     padding: 90px 20px 80px;
+    border-radius: 26px 26px 0 0;
   }
 
   .gallery .gallery-header {
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   .gallery .gallery-header h2 {
-    font-size: 44px;
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
     letter-spacing: -1.5px;
   }
 
   .gallery .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: 180px;
-
     gap: 10px;
   }
 
@@ -491,11 +525,11 @@
 @media (max-width: 480px) {
 
   .gallery {
-    padding: 70px 15px;
+    padding: 70px 15px 68px;
   }
 
   .gallery .gallery-header {
-    margin-bottom: 35px;
+    margin-bottom: 28px;
   }
 
   .gallery .gallery-header span {
@@ -503,24 +537,24 @@
   }
 
   .gallery .gallery-header h2 {
-    font-size: 38px;
+    font-size: clamp(2.1rem, 10vw, 3rem);
   }
 
   .gallery .grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 300px;
-
+    grid-auto-rows: 240px;
     gap: 12px;
   }
 
   .gallery .grid .item:nth-child(n) {
     grid-row: span 1;
+    border-radius: 18px;
   }
 
   .gallery .grid .item:nth-child(1),
   .gallery .grid .item:nth-child(3),
   .gallery .grid .item:nth-child(5) {
-    height: 450px;
+    height: 320px;
   }
 }
 
@@ -732,31 +766,30 @@
 
   .services {
     padding: 90px 20px 80px;
+    border-radius: 26px 26px 0 0;
   }
 
   .services-header {
-    margin-bottom: 60px;
+    margin-bottom: 56px;
   }
 
   .services-header h2 {
-    font-size: 44px;
-
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
     letter-spacing: -1.5px;
   }
 
   .service-card {
     grid-template-columns: 35px 1fr;
-
-    padding: 30px 0;
+    padding: 26px 0;
   }
 
   .service-card__title {
     align-items: flex-start;
+    gap: 18px;
   }
 
   .service-card__title h3 {
-    font-size: 36px;
-
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
     letter-spacing: -1.5px;
   }
 
@@ -766,7 +799,6 @@
 
   .service-card__content > p {
     font-size: 14px;
-
     margin: 20px 0 25px;
   }
 
@@ -776,7 +808,6 @@
 
   .service-card__catalog span {
     font-size: 9px;
-
     padding: 7px 10px;
   }
 
@@ -790,13 +821,13 @@
 @media (max-width: 480px) {
 
   .services {
-    padding: 70px 15px;
+    padding: 70px 15px 64px;
   }
 
   .service-card {
     grid-template-columns: 1fr;
-
-    gap: 15px;
+    gap: 12px;
+    padding: 24px 0;
   }
 
   .service-card__number {
@@ -804,7 +835,7 @@
   }
 
   .service-card__title h3 {
-    font-size: 32px;
+    font-size: clamp(1.7rem, 8vw, 2.6rem);
   }
 
 }
@@ -1031,6 +1062,7 @@
 
   .contact {
     padding: 110px 30px 30px;
+    border-radius: 26px 26px 0 0;
   }
 
   .contact-content {
@@ -1052,34 +1084,35 @@
 
   .contact {
     min-height: auto;
-
     padding: 90px 20px 30px;
   }
 
   .contact-header {
-    margin-bottom: 70px;
+    margin-bottom: 56px;
   }
 
   .contact-header h2 {
-    font-size: 58px;
-
+    font-size: clamp(2.5rem, 9vw, 3.8rem);
     letter-spacing: -3px;
   }
 
   .contact-header p {
-    margin-top: 30px;
+    margin-top: 24px;
+    font-size: 14px;
   }
 
   .contact-content {
-    gap: 50px;
-
-    padding: 35px 0;
+    gap: 40px;
+    padding: 28px 0;
   }
 
   .contact-info {
     grid-template-columns: 1fr;
+    gap: 26px;
+  }
 
-    gap: 30px;
+  .contact-item a {
+    font-size: 13px;
   }
 
   .contact-action {
@@ -1092,9 +1125,10 @@
   }
 
   .contact-footer {
-    gap: 20px;
-
+    gap: 16px;
     flex-direction: column;
+    font-size: 9px;
+    letter-spacing: 0.14em;
   }
 
 }
@@ -1111,7 +1145,13 @@
   }
 
   .contact-header h2 {
-    font-size: 48px;
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .contact-button {
+    width: 160px;
+    height: 160px;
+    font-size: 10px;
   }
 
 }

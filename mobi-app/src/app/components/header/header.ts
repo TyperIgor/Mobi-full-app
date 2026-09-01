@@ -7,9 +7,10 @@ import { Component, HostListener } from '@angular/core';
 })
 export class Header {
   isLight = false;
+  private readonly scrollThreshold = 220;
 
   @HostListener('window:scroll')
   onScroll(): void {
-    this.isLight = window.scrollY > 180;
+    this.isLight = window.scrollY > this.scrollThreshold;
   }
 }
