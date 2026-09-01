@@ -5,7 +5,7 @@
 
   <div class="right">
     <h1>
-      Leo Mendes <br />
+      Mobi Full <br />
       Portfólio Fotográfico
     </h1>
 
@@ -66,29 +66,11 @@
     </div>
 
     <div class="about__text">
-      <p class="about__intro">
-        Histórias reais, momentos únicos e imagens
-        que permanecem.
-      </p>
-
-      <p>
-        Acreditamos que cada fotografia carrega uma
-        história. Nosso trabalho nasce da observação,
-        da sensibilidade e da busca por registrar aquilo
-        que acontece naturalmente.
-      </p>
-
-      <p>
-        Mais do que criar imagens bonitas, buscamos
-        construir registros que tenham significado,
-        personalidade e verdade.
-      </p>
-
-      <p>
-        Cada ensaio é pensado de forma única,
-        respeitando a identidade, o momento e a
-        essência de cada pessoa.
-      </p>
+      @for (item of aboutText; track item.text) {
+        <p [class.about__intro]="item.intro">
+          {{ item.text }}
+        </p>
+      }
     </div>
 
     <div class="about__footer">
