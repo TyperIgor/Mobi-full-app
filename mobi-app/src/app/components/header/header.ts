@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.css']
 })
 export class Header {
-  // Componente Header básico. Adapte lógica e bindings conforme necessário.
+  isLight = false;
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.isLight = window.scrollY > 180;
+  }
 }
