@@ -68,15 +68,7 @@
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-.nav a:hover {
-  color: #fff;
-}
-
-.nav a.active {
-  color: #fff;
-}
-
-.nav a.active::after {
+.nav a::after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -85,6 +77,22 @@
   height: 2px;
   background: rgba(255, 255, 255, 0.92);
   border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  transform: scaleX(1);
+}
+
+.nav a.active {
+  color: #fff;
 }
 
 .header--light .nav a {
