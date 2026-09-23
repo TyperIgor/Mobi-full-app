@@ -1,6 +1,13 @@
 <section id="hero" class="hero">
   <div class="left">
-    <img src="assets/img/TheBoss.jpeg" />
+    <img
+      ngSrc="assets/img/TheBoss.jpeg"
+      width="360"
+      height="540"
+      priority
+      alt="Retrato de Leo Mendes"
+      decoding="async"
+    />
   </div>
 
   <div class="right">
@@ -28,26 +35,64 @@
   <div class="grid">
 
     @for (img of galleryImages; track img) {
-      <div class="item">
+      <div
+        class="item"
+        role="button"
+        tabindex="0"
+        (click)="openImage(img)"
+        (keydown.enter)="openImage(img)"
+        (keydown.space)="openImage(img); $event.preventDefault()"
+        [attr.aria-label]="'Expandir imagem ' + ($index + 1)"
+      >
         <img
-          [src]="img"
+          [ngSrc]="img"
+          fill
           alt="Fotografia de Leo Mendes"
           loading="lazy"
           decoding="async"
+          sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 25vw"
         />
       </div>
     }
 
   </div>
 
+  @if (selectedImage) {
+    <div
+      class="lightbox"
+      [class.lightbox--closing]="lightboxClosing"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Imagem ampliada"
+      (click)="closeImage()"
+    >
+      <button
+        class="lightbox__close"
+        type="button"
+        aria-label="Fechar imagem ampliada"
+        (click)="closeImage()"
+      >
+        <span aria-hidden="true">&#215;</span>
+      </button>
+
+      <img
+        class="lightbox__image"
+        [src]="selectedImage"
+        alt="Fotografia ampliada de Leo Mendes"
+        (click)="$event.stopPropagation()"
+      />
+    </div>
+  }
+
 </section>
 
 <section id="about" class="about">
   <div class="about__image">
     <img
-      src="assets/img/IMG_4154.JPG.jpeg"
+      ngSrc="assets/img/IMG_4154.JPG.jpeg"
+      fill
       alt="Sobre o fotógrafo"
-      fetchpriority="high"
+      sizes="(max-width: 900px) 100vw, 50vw"
       decoding="async"
     />
 
@@ -61,7 +106,7 @@
 
       <h2>
         <br />
-        O fotógrafo "The Boss"
+        O fotógrafo
       </h2>
     </div>
 
