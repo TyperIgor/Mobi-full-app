@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { aboutContent } from '../../data/about-content';
 
 @Component({
@@ -10,8 +10,11 @@ import { aboutContent } from '../../data/about-content';
 })
 export class Landing {
   aboutText = aboutContent;
+  selectedImage: string | null = null;
+  lightboxClosing = false;
+  private closeTimeout?: ReturnType<typeof setTimeout>;
 
-galleryImages = [
+  galleryImages = [
     'assets/img/IMG_5457.JPG.jpeg',
     'assets/img/IMG_5460.JPG.jpeg',
     'assets/img/IMG_7610.JPEG',
@@ -34,4 +37,31 @@ galleryImages = [
     'assets/img/IMG_8210.jpg',
     'assets/img/IMG_8518.jpg',
   ];
+
+  openImage(image: string): void {
+    if (this.closeTimeout) {
+      clearTimeout(this.closeTimeout);
+    }
+
+    this.lightboxClosing = false;
+    this.selectedImage = image;
+  }
+
+  closeImage(): void {
+    if (!this.selectedImage || this.lightboxClosing) {
+      return;
+    }
+
+    this.lightboxClosing = true;
+    this.closeTimeout = setTimeout(() => {
+      this.selectedImage = null;
+      this.lightboxClosing = false;
+      this.closeTimeout = undefined;
+    }, 260);
+  }
+
+  @HostListener('document:keydown.escape')
+  handleEscape(): void {
+    this.closeImage();
+  }
 }
